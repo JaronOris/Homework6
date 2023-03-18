@@ -1,0 +1,170 @@
+.site-container {
+    width: 100%;
+    min-height: 100%;
+    background-image: url(../images/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        font-style: italic;
+        text-decoration: underline;
+        color: white;
+        margin-top: 100px;
+    }
+}
+
+#app {
+
+    width: 90vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    margin: 100px 0px;
+    background-color: rgba(72, 41, 0, 0.9);
+
+        .item-card {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column-reverse;
+            cursor: pointer;
+            background-color: burlywood;
+            border: solid 2px white;
+
+            img {
+                width: 296px;
+                height: 296px;
+                position: absolute;
+            }
+    
+            .item-info {
+                width: 296px;
+                height: 50px;
+                padding: 10px 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: center;
+                background-color: rgba(0, 0, 0, .75);
+                color: white;
+                transition: height .5s;
+                transition-timing-function: ease-in-out;
+                overflow: hidden;
+                position: relative;
+    
+                h3 {
+                    font-size: 26px;
+                    font-style: italic;
+                }
+    
+                p {
+                    font-size: 15px;
+                    opacity: 0;
+                    transition: .6s;
+                }
+            }
+    
+            .price {
+                width: 296px;
+                height: 25px;
+                padding-right: 20px;
+                font-style: italic;
+                font-size: 20px;
+                text-align: end;
+                position: relative;
+                color: white;
+                background-color: rgba(0, 0, 0, .75);
+            }
+        }
+    
+        .item-card:hover {
+            .item-info {
+                height: 225px;
+    
+                p {
+                    opacity: 1;
+                }
+            }
+        }
+    
+        .item-page-container {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        
+            .item-page {
+                width: 80vw;
+                height: 80vh;
+                margin: 0 auto;
+                position: relative;
+        
+                .item-name {
+                    text-align: center;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 30px;
+                    font-style: italic;
+                    color: white;
+                }
+        
+                .portrait-description {
+                    width: 100%;
+                    height: 95%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+        
+                    .full-size-image {
+                        img {
+                            width: auto;
+                            max-width: 500px;
+                            max-height: 500px;
+                            object-fit: cover;
+                        }
+                    }
+                    .description-price {
+                        width: 400px;
+                        height: 440px;
+        
+                        .description {
+                            width: 100%;
+                            height: 400px;
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            color: white;
+                        }
+        
+                        .price {
+                            width: 100%;
+                            height: 40px;
+                            padding-right: 20px;
+                            text-align: end;
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            font-style: italic;
+                            font-size: 26px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+}
+
+.close {
+    width: 70px;
+    height: 40px;
+    padding: 10px 0px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid 2px white;
+    background-color: red;
+    color: white;
+}
